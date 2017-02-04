@@ -646,7 +646,7 @@ var ColoredUsernames;
 var ClearPastMessages;
 (function (ClearPastMessages) {
     // INITIALIZATION
-    var maxMessages = 50;
+    var maxMessages = 5;
     // Options
     var enabled = true;
     var $checkbox = Options.addCheckbox({
