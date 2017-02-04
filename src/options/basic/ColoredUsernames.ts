@@ -100,6 +100,7 @@ module ColoredUsernames {
 		if(data.author == 'TOP_20') {
 			data.author_elem
 				.html(`\u2764 Whitney \u2764`)
+				.css('font-weight', 'bold');
 		}
 
           }
