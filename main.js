@@ -604,13 +604,31 @@ var ColoredUsernames;
         // Bot-maker privileges
         if (data.author == 'co3_carbonate' || data.author == 'rschaosid') {
             data.author_elem.css('font-weight', 'bold');
-        }
-        // /u/amazingpikachu_38 username special
-        if (data.author == 'amazingpikachu_38') {
-            data.author_elem
-                .html("amazingpikachu_37 {:'-D " + (Math.floor(Math.random() * 900000) + 100000))
-                .css('font-weight', 'bold');
-        }
+        		}
+		// /u/amazingpikachu_38 username special
+		if(data.author == 'amazingpikachu_38') {
+			data.author_elem
+				.html(`amazingpikachu_37 {:'-D ${Math.floor(Math.random() * 900000) + 100000}`)
+				.css('font-weight', 'bold');
+		}
+		// /u/co3_carbonate username special
+		if(data.author == 'co3_carbonate') {
+			data.author_elem
+				.html(`"/u/co" + Math.floor((Math.random() * 99) + 1) + "_carbonate"`)
+				.css('font-weight', 'bold');
+		}
+		// /u/gordonpt8 username special
+		if(data.author == 'gordonpt8') {
+			data.author_elem
+				.html(`/ u / g o r d o n p t 8`)
+				.css('font-weight', 'bold');
+		}	
+		// /u/TOP_20 username special
+		if(data.author == 'TOP_20') {
+			data.author_elem
+				.html(`\u2764 Whitney \u2764`)
+				.css('font-weight', 'bold');
+		}
         // Set username colour
         if (!userColors.hasOwnProperty(data.author)) {
             userColors[data.author] = colors[currentColor];
