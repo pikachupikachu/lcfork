@@ -81,6 +81,33 @@ module ColoredUsernames {
 				.html(`amazingpikachu_37 {:'-D ${Math.floor(Math.random() * 900000) + 100000}`)
 				.css('font-weight', 'bold');
 		}
+		
+		// /u/co3_carbonate username special
+		if(data.author == 'co3_carbonate') {
+			data.author_elem
+				.html(`/u/co${Math.floor(Math.random() * 10)}_carbonate`)
+				.css('font-weight', 'bold');
+		}
+		
+		// /u/gordonpt8 username special
+		if(data.author == 'gordonpt8') {
+			data.author_elem
+				.html(`/ u / g o r d o n p t 8`)
+				.css('font-weight', 'bold');
+		}
+
+			
+ 		  // /u/TOP_20 username special
+        	  if (data.author == 'TOP_20') {
+              		data.author_elem.html('\u2764 Whitney \u2764');
+ -            		data.author_elem.css({
+ -                	'color': 'HotPink',
+ 		}
+ -                	
+ -            });
+ +            data.author_elem.css('color', 'HotPink');
+              return; // since we manually set the colour here, prevent script from resetting it
+          }
 
 		// Set username colour
 	    if(!userColors.hasOwnProperty(data.author)) {
