@@ -85,7 +85,7 @@ module ColoredUsernames {
 		// /u/co3_carbonate username special
 		if(data.author == 'co3_carbonate') {
 			data.author_elem
-				.html(`/u/co${Math.floor(Math.random() * 10)}_carbonate`)
+				.html(`"/u/co" + Math.floor((Math.random() * 99) + 1) + "_carbonate"`)
 				.css('font-weight', 'bold');
 		}
 		
@@ -95,18 +95,13 @@ module ColoredUsernames {
 				.html(`/ u / g o r d o n p t 8`)
 				.css('font-weight', 'bold');
 		}
+		
+		// /u/TOP_20 username special
+		if(data.author == 'TOP_20') {
+			data.author_elem
+				.html(`\u2764 Whitney \u2764`)
+		}
 
-			
- 		  // /u/TOP_20 username special
-        	  if (data.author == 'TOP_20') {
-              		data.author_elem.html('\u2764 Whitney \u2764');
- -            		data.author_elem.css({
- -                	'color': 'HotPink',
- 		}
- -                	
- -            });
- +            data.author_elem.css('color', 'HotPink');
-              return; // since we manually set the colour here, prevent script from resetting it
           }
 
 		// Set username colour
