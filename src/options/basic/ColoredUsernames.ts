@@ -103,17 +103,6 @@ module ColoredUsernames {
 				.html(`\u2764 Whitney \u2764`)
 				.css('font-weight', 'bold');
 		}
-		
-		// /u/dominodan123 username special (upside-down)
-        	if (data.author == 'dominodan123') {
-            		data.author_elem.css({
-                		'-moz-transform': 'rotate(-180deg)',
-                		'-o-transform': 'rotate(-180deg)',
-                		'-webkit-transform': 'rotate(-180deg)',
-               			'transform': 'rotate(-180deg)',
-                		'display': 'inline-block',  
-				'vertical-align': 'middle'
-		});
           }
 
 		// Set username colour
