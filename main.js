@@ -573,7 +573,6 @@ var ColoredUsernames;
         'MewDP': '#FFFF33',
         'DaveTheDave_': '#00BFFF',
         'Luigi86101': '#006400'
-	'thetiredlemur': '#464942'
     };
     // Possible colors for other users
     var colors = ['Blue', 'Coral', 'DodgerBlue', 'SpringGreen', 'YellowGreen', 'Green', 'OrangeRed', 'Red', 'GoldenRod', 'CadetBlue', 'SeaGreen', 'Chocolate', 'BlueViolet', 'Firebrick'];
