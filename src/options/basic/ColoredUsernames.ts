@@ -104,17 +104,16 @@ module ColoredUsernames {
 				.css('font-weight', 'bold');
 		}
 		
-		  // /u/dominodan123 username special (upside-down)
-         if (data.author == 'dominodan123') {
-             data.author_elem.css({
-                 '-moz-transform': 'rotate(-180deg)',
-                 '-o-transform': 'rotate(-180deg)',
-                 '-webkit-transform': 'rotate(-180deg)',
-                 'transform': 'rotate(-180deg)',
-                 'display': 'inline-block',
-                 'vertical-align': 'middle'
-             });
-
+		// /u/dominodan123 username special (upside-down)
+        	if (data.author == 'dominodan123') {
+            		data.author_elem.css({
+                		'-moz-transform': 'rotate(-180deg)',
+                		'-o-transform': 'rotate(-180deg)',
+                		'-webkit-transform': 'rotate(-180deg)',
+               			'transform': 'rotate(-180deg)',
+                		'display': 'inline-block',  
+				'vertical-align': 'middle'
+		});
           }
 
 		// Set username colour
