@@ -572,7 +572,8 @@ var ColoredUsernames;
         'KingCaspianX': '#191970',
         'MewDP': '#FFFF33',
         'DaveTheDave_': '#00BFFF',
-        'Luigi86101': '#006400'
+        'Luigi86101': '#006400',
+        'thetiredlemur': '#464942'
     };
     // Possible colors for other users
     var colors = ['Blue', 'Coral', 'DodgerBlue', 'SpringGreen', 'YellowGreen', 'Green', 'OrangeRed', 'Red', 'GoldenRod', 'CadetBlue', 'SeaGreen', 'Chocolate', 'BlueViolet', 'Firebrick'];
@@ -934,3 +935,37 @@ var StandardizeNumberFormat;
         });
     });
 })(StandardizeNumberFormat || (StandardizeNumberFormat = {}));
+
+/////////////////////////
+// ColoredUsernames.ts //
+/////////////////////////
+var ColoredUsernames;
+(function (ColoredUsernames) {
+    });
+    // EVENTS
+    // New update loaded
+    Update.loadedNew(function (data) {
+        if (!enabled)
+            return;
+        // /u/dominodan123 username special (upside-down)
+        if (data.author == 'dominodan123') {
+            data.author_elem.css({
+                '-moz-transform': 'rotate(-180deg)',
+                '-o-transform': 'rotate(-180deg)',
+                '-webkit-transform': 'rotate(-180deg)',
+                'transform': 'rotate(-180deg)',
+                'display': 'inline-block',
+                'vertical-align': 'middle'
+            });
+        }
+        // Set username colour
+        if (!userColors.hasOwnProperty(data.author)) {
+            userColors[data.author] = colors[currentColor];
+            currentColor++;
+            if (currentColor == colors.length) {
+                currentColor = 0;
+            }
+        }
+        data.author_elem.css('color', userColors[data.author]);
+    });
+})(ColoredUsernames || (ColoredUsernames = {}));
