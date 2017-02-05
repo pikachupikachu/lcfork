@@ -103,6 +103,7 @@ module ColoredUsernames {
 				.html(`\u2764 Whitney \u2764`)
 				.css('font-weight', 'bold');
 		}
+		
           }
 
 		// Set username colour
