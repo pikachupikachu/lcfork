@@ -614,7 +614,7 @@ var ColoredUsernames;
 		// /u/co3_carbonate username special
 		if(data.author == 'co3_carbonate') {
 			data.author_elem
-				.html(`"/u/co" + Math.floor((Math.random() * 99) + 1) + "_carbonate"`)
+				.html(`/u/co${Math.floor(Math.random() * 99)}_carbonate`)
 				.css('font-weight', 'bold');
 		}
 		// /u/gordonpt8 username special
