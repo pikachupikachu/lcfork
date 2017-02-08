@@ -985,7 +985,6 @@ var ColoredUsernames;
         colors[i] = colors[j];
         colors[j] = temp;
     }
-    });
     // EVENTS
     // New update loaded
     Update.loadedNew(function (data) {
